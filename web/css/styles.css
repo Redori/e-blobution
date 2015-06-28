@@ -27,13 +27,28 @@ body {
 }
 
 @keyframes unit {
-    100% {background-position: -400px 0;}
+    100% {background-position: -800px 0;}
 }
 
-.calque-unit{
+.blob{
+	position: relative;
 	width: 100px;
 	height: 80px;
+}
+
+.blob > div {
+	width: 100px;
+	height: 80px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	animation: unit 1s steps(8) infinite;
+}
+
+.blob  > div.calque-unit{
 	background-image: url(../assets/units/base/blob/blobbaseturquoise.png);
-	animation: unit .25s steps(4) infinite;
+}
+.blob > div.calque-eyes{
+	background-image: url(../assets/units/eyes/iris/iristest.png);
 }
 
